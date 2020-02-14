@@ -1,13 +1,11 @@
 package domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
 @Table(name = "modalidade")
 public class Modality implements BaseEntity {
-
     @Id()
     @GeneratedValue(generator = "modalidade_seq",
             strategy = GenerationType.AUTO)

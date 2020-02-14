@@ -8,7 +8,6 @@ import java.util.Objects;
 
 public class ModalityDAO extends DAO<Modality> {
 
-
     @Override
     protected String getSqlString() {
         return "select m from Modality m";

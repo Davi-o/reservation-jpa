@@ -4,8 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "guia_modalidade")
-public class GuideModality {
-
+public class GuideModality implements BaseEntity {
     @Id()
     @GeneratedValue(generator = "guia_modalide_seq",
             strategy = GenerationType.AUTO)
@@ -20,7 +19,12 @@ public class GuideModality {
     @JoinColumn(name = "id_modalidade")
     private Modality modality;
 
-    public Long getId() {
+    public GuideModality(TourGuide tourGuide, Modality modality) {
+		this.tourGuide = tourGuide;
+		this.modality = modality;
+	}
+
+	public Long getId() {
         return id;
     }
 
